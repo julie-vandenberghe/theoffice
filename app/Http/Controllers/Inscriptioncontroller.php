@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\client;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class Inscriptioncontroller extends Controller
@@ -12,18 +12,30 @@ class Inscriptioncontroller extends Controller
         return view('inscription');
     }
 
+    public function client()
+    {
+        return view('inscription', [
+            'users' => User::all(),
+        ]);
+    }
+
     public function create(Request $request)
     {
         $request->validate([
-            'email'=>'required',
-            'passeword'=>'required|min:8',
-            'passeword_confirm'=>'required|min8',
+            'email'=>'required|email',
+            'password'=>'required|min:8|confirmed',
+            // 'password_confirm'=>'required|min:8',
         ]);
 
-        $client = new client();
+        $client = new User();
         $client->email = $request->email;
-        $client->passeword = $request->passeword;
+        $client->password = $request->password;
+        $client->save();
+    
+        return redirect('/inscription')->with('message', 'Le client a été créé.');
     }
+
+    
 
 
 }
