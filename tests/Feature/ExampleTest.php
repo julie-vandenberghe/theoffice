@@ -16,4 +16,11 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function test_hello_route_returns_hello(): void
+    {
+        $response = $this->get('/addroom');
+
+        $response->assertSee('Hello Toto');
+    }
 }
