@@ -11,7 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+
+        Schema::create('rooms', function (Blueprint $table) {
+            $table->string('name');
+            $table->float('price')->nullable();
+            $table->float('number')->nullable();
+            $table->timestamps();
+        });
+
     }
 
     /**
@@ -19,6 +26,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+
+        Schema::dropIfExists('rooms');
+
     }
 };
