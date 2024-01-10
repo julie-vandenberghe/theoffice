@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RoomsController;
+use App\Http\Controllers\Inscriptioncontroller;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/inscription', [Inscriptioncontroller::class, 'inscription']);
 
 Route::get('/salle/nouvelle', [RoomsController::class, 'create']);
 Route::post('/salle/nouvelle', [RoomsController::class, 'store']);
