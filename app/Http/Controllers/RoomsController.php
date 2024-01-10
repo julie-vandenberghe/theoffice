@@ -28,7 +28,7 @@ class RoomsController extends Controller
         $room->number = $request->number;
         $room->save();
     
-        return redirect('/')->with('message', 'La salle a été ajoutée.');
+        return redirect('/salles')->with('message', 'La salle a été ajoutée.');
     }
 
 }

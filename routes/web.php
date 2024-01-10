@@ -21,3 +21,4 @@ Route::get('/', function () {
 
 Route::get('/salle/nouvelle', [RoomsController::class, 'create']);
 Route::post('/salle/nouvelle', [RoomsController::class, 'store']);
+
