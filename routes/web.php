@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/addroom', function () {
-    return view('hello', [
+Route::get('/salle/nouvelle', function () {
+    return view('create', [
         'name' => 'Toto',
     ]);
 });
