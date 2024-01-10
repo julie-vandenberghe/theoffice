@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Room;
 
 class RoomsController extends Controller
 {
@@ -21,13 +22,13 @@ class RoomsController extends Controller
             'number' => 'nullable|numeric',
         ]);
 
-        $matelas = new Room();
-        $matelas->name = $request->name;
-        $matelas->price = $request->price;
-        $matelas->number = $request->number;
-        $matelas->save();
+        $room = new Room();
+        $room->name = $request->name;
+        $room->price = $request->price;
+        $room->number = $request->number;
+        $room->save();
     
-        return redirect('/')->with('message', 'Le matelas a été ajouté.');
+        return redirect('/')->with('message', 'La salle a été ajoutée.');
     }
 
 }
