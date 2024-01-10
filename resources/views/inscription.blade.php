@@ -8,24 +8,45 @@
 </head>
 <body>
     <h1> Inscription</h1>
-
+<form action="" method="post">
+    @csrf
     <div>
-        <label for="email">Email</label>
-        <input type="text" pattern=".+@example\.com" size="30" placeholder="toto@gmail.com" required>
+        <label>Email</label>
+        <input name="email" type="text" size="30" placeholder="toto@gmail.com" required>
+        @error('email')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+        @enderror
     </div>
 
     <div>
-        <label for="passeword">Mot de passe</label>
-        <input type="text" minlength="8" required>
+        <label>Mot de passe</label>
+        <input name="password" type="text" minlength="8" required>
+        @error('password')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+        @enderror
     </div>
+    
     <div>
-        <label for="passeword_confirm">Confirmation du mot de passe</label>
-        <input type="text" minlength="8" required>
+        <label>Confirmation du mot de passe</label>
+        <input name="password_confirmation" type="text" minlength="8" required>
+        @error('password')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+        @enderror
     </div>
 
+
+
     <div>
-        <input type="submit" value="S'inscrire">
+        <button>S'inscrire</button>
     </div>
+
+</form>
 
 
     

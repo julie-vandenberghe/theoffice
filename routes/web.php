@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\RoomsController;
 use App\Http\Controllers\Inscriptioncontroller;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\RoomsController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -27,6 +27,7 @@ Route::post('/salle/nouvelle', [RoomsController::class, 'store']);
 Route::get('/utilisateurs', [UsersController::class, 'index']);
 //CRUD INSCRIPTIONS
 Route::get('/inscription', [Inscriptioncontroller::class, 'inscription']);
+Route::post('/inscription', [Inscriptioncontroller::class, 'create']);
 
 
 
