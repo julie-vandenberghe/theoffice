@@ -19,7 +19,7 @@ class RoomsController extends Controller
         $request->validate([
             'name' => 'required',
             'price' => 'nullable|numeric|between:1,9999',
-            'number' => 'nullable|numeric|unique',
+            'number' => 'nullable|numeric|unique:rooms',
         ]);
 
         $room = new Room();
