@@ -8,7 +8,7 @@ class RoomsController extends Controller
 {
     public function create()
     {
-        return view('salle/create', [
+        return view('create', [
         ]);
     }
 

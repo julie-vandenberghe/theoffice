@@ -17,8 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/salle/nouvelle', function () {
-    return view('create', [
-        'name' => 'Toto',
-    ]);
-});
+Route::get('/salle/nouvelle', [RoomsController::class, 'create']);
+Route::post('/salle/nouvelle', [RoomsController::class, 'store']);
