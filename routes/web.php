@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Inscriptioncontroller;
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\RoomsController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,12 +20,14 @@ use Illuminate\Support\Facades\Route;
 
 //CRUD SALLES
 Route::get('/salles',[RoomsController::class, 'index']);
-   
+Route::get('/salle/nouvelle', [RoomsController::class, 'create']);
+Route::post('/salle/nouvelle', [RoomsController::class, 'store']);  
 
-
+//CRUD UTILISATEURS
+Route::get('/utilisateurs', [UsersController::class, 'index']);
+//CRUD INSCRIPTIONS
 Route::get('/inscription', [Inscriptioncontroller::class, 'inscription']);
 Route::post('/inscription', [Inscriptioncontroller::class, 'create']);
 
-Route::get('/salle/nouvelle', [RoomsController::class, 'create']);
-Route::post('/salle/nouvelle', [RoomsController::class, 'store']);
+
 
