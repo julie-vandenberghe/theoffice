@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class RoomsController extends Controller
 {
+
     public function create()
     {
         return view('create', [
@@ -28,4 +29,5 @@ class RoomsController extends Controller
     
         return redirect('/')->with('message', 'Le matelas a été ajouté.');
     }
+
 }
