@@ -16,9 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+//CRUD SALLES
+Route::get('/salles',[RoomsController::class, 'index']);
+   
 
 
 Route::get('/inscription', [Inscriptioncontroller::class, 'inscription']);
