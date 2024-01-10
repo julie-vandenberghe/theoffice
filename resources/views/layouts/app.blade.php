@@ -16,8 +16,8 @@
                 </h1>
                 <nav class="flex space-x-20">
                     <a class="font-bold hover:underline underline-offset-8" href="/">Accueil</a>
-                    <a class="font-bold hover:underline underline-offset-8" href="/matelas">Salles</a>
-                    <a class="font-bold hover:underline underline-offset-8" href="/marques">Utilisateurs</a>
+                    <a class="font-bold hover:underline underline-offset-8" href="/salles">Salles</a>
+                    <a class="font-bold hover:underline underline-offset-8" href="/utilisateurs">Utilisateurs</a>
                                         
                 </nav>
             </div>
