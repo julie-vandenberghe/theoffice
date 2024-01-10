@@ -14,11 +14,10 @@ class RoomFactory extends Factory
     public function definition(): array
     { 
         return [
-            'roomNumber' => fake()->randomFloat(2, 1, 99),
-            'name' => fake()->sentence(3),
-            'price' => fake()->randomFloat(4, 100, 3000),
-            'picture' => fake()->imageUrl(),
 
+            'name' => $this->faker->sentence(1),
+            'price' => $this->faker->numberBetween(1, 1500),
+            'number' => $this->faker->numberBetween(1, 10),
 
         ];
     }

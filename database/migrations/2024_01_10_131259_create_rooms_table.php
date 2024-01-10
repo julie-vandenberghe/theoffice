@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
+
         Schema::create('rooms', function (Blueprint $table) {
-            $table->id();
-            $table->integer('roomNumber');
             $table->string('name');
-            $table->integer('price');
-            $table->string('picture');
+            $table->float('price')->nullable();
+            $table->float('number')->nullable();
             $table->timestamps();
         });
+
     }
 
     /**
@@ -26,6 +26,8 @@ return new class extends Migration
      */
     public function down(): void
     {
+
         Schema::dropIfExists('rooms');
+
     }
 };

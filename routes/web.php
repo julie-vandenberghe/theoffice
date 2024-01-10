@@ -18,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 //CRUD SALLES
 Route::get('/salles',[RoomsController::class, 'index']);
    
+
+Route::get('/salle/nouvelle', [RoomsController::class, 'create']);
+Route::post('/salle/nouvelle', [RoomsController::class, 'store']);
