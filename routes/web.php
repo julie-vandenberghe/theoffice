@@ -18,5 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/inscription', [Inscriptioncontroller::class, 'inscription']);
+
 
