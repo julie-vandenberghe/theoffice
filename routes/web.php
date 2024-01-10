@@ -18,5 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/inscription', [Inscriptioncontroller::class, 'inscription']);
+
+
+Route::get('/salle/nouvelle', [RoomsController::class, 'create']);
+Route::post('/salle/nouvelle', [RoomsController::class, 'store']);
 
