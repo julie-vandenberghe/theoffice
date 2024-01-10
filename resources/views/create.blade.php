@@ -1,4 +1,4 @@
-<h1>Ajouter un nouveau matelas</h1>
+<h1>Ajouter une nouvelle salle</h1>
 
 <form method="post" class="w-[300px]">
     @csrf {{-- Anytime you define an HTML form in your application, you should include a hidden CSRF token field in the form so that the CSRF protection middleware can validate the request.--}}

@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Room;
 use Illuminate\Database\Seeder;
+use App\Models\Rooms;
 
 class DatabaseSeeder extends Seeder
 {
