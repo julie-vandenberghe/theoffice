@@ -22,3 +22,9 @@ Route::get('/', function () {
 Route::get('/inscription', [Inscriptioncontroller::class, 'inscription']);
 
 
+<<<<<<< HEAD
+=======
+Route::get('/salle/nouvelle', [RoomsController::class, 'create']);
+Route::post('/salle/nouvelle', [RoomsController::class, 'store']);
+
+>>>>>>> main
